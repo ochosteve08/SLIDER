@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: blue;
+            padding: 0 15px;
+            
+        }
+
+        .wrapper{
+            position: relative;
+            background: white;
+            overflow-x: hidden;
+            border-radius: 14px;
+            max-width: 1000px;
+            padding: 20px 0;
+            gap: 20px;
+
+        }
+
+        .icons{
+            display:flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            height:100%;
+            width: 120px;
+        }
+        .icons:first-child{
+            left:0;
+            background: linear-gradient(90deg, white 70%,transparent);
+            display: none;
+
+        }
+        .icons:last-child{
+            right:0;
+            justify-content: flex-end;
+            background: linear-gradient(-90deg, white 70%,transparent);
+            /*display: none;*/
+
+        }
+
+        .icons i{
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            background: white;
+            text-align: center;
+            line-height: 55px;
+            border-radius: 50%;
+           
+            
+        }
+
+          .icons i:hover{
+            background-color: aliceblue;
+          }
+
+        .icons:first-child i{
+            margin-left: 15px;
+        }
+
+        .icons:last-child i{
+            margin-left: 45px;
+        }
+
+        .tab-box{
+            display: flex;
+             list-style: none;
+            gap: 20px;
+            overflow:hidden;
+            scroll-behavior: smooth;
+           
+        }
+
+        
+         .tab-box.sliding{
+            scroll-behavior: auto;
+            cursor: grab;
+
+
+         }
+
+         .tab{
+                  
+            white-space: nowrap;
+            padding:10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: rgb(235, 235, 235);
+            cursor:pointer;
+            font-size: 1.15rem;
+
+           
+         }
+
+
+          .tab-box.sliding .tab{
+            user-select: none;
+            pointer-events: none;
+
+
+         }
+
+
+
+         .tab-box .tab.active{
+            background: blue;
+            color: white;
+            border-color: transparent;
+         }
+
+          .tab:hover{
+            background-color: aliceblue;
+            color: black;
+           
+          }
+        
+    </style>
+    <div class="wrapper">
+      <div class="icons">
+        <i id="left" class="arrows fa fa-angle-left" aria-hidden="true"></i>
+      </div> 
+    <ul class="tab-box">
+        <li class="tab">coding</li>
+        <li class="tab active">javascript</li>
+        <li class="tab">podcast</li>
+        <li class="tab">databases</li>
+        <li class="tab">web development</li>
+        <li class="tab">unboxing</li>
+        <li class="tab">history</li>
+        <li class="tab">programming</li>
+        <li class="tab">gadget</li>
+        <li class="tab">algorithm</li>
+        <li class="tab">comedy</li>
+        <li class="tab">gaming</li>
+        <li class="tab">share market</li>
+        <li class="tab">smart phones</li>
+        <li class="tab">data structure</li>
+    </ul>
+    <div class="icons"><i id="right" class="arrows fa fa-angle-right" aria-hidden="true"></i></div>
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
